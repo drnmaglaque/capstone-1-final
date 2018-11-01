@@ -79,6 +79,7 @@ div#landing-body {
 
 .left p {
   color: #F6F6F6;
+  font-family: "Quicksand";
 }
 
 .landing-btn {
@@ -104,13 +105,6 @@ div#landing-body {
 }
 
 /* --------------------------------------------------------Home Page */
-#home-body-bg {
-  background: url('../images/index-bg62.jpg') no-repeat;
-  background-size: cover;
-  background-position: 0 0%;
-  height: 100vh;
-  /* background-size: 100%; */
-}
 
 #home-logo {
  position: absolute;
@@ -127,11 +121,11 @@ div#landing-body {
 }
 
 #home-footer {
-  background-color: #E0E0E0;
+  background-color: rgba(224, 224, 224,0.4);
   /* display: none; */
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  right: 0;
+  right: 0; 
 }
 
 .footer-nav {
@@ -157,6 +151,8 @@ div#landing-body {
   background: url(../images/home-bg.jpg) no-repeat;
   background-size: cover;
   background-position: 0 40%;
+  position: fixed;
+  border-right: 2px solid #fff;
 }
 
 .home-right-bg {
@@ -164,6 +160,7 @@ div#landing-body {
   text-align: center;
   color: #4F4F4F;
   font-family: "Quicksand";
+  border-left: 3px solid #fff;
 }
 
 
@@ -171,16 +168,70 @@ div#landing-body {
   font-size: 1.5em;
   font-weight: 700;
   width: 70%;
-  border-top: 1px solid #EEEEEE;
+  /* border-top: 1px solid #EEEEEE; */
   padding-top: 5%;
   /* padding-left: 30%; */
   margin: 0 auto;
   margin-top: 25%;
   margin-bottom: 10%;
+  position: relative;
 }
+
+.home-intro > h1::before {
+  content: url(../ornament/eye.png);
+  display: block;
+  position: absolute;
+  bottom: 25%;
+  left: 5%;
+  transform: scale(0.3)
+}
+
 .home-intro p {
-  margin-bottom: 15%;
+  margin-bottom: 5%;
 }
+
+.home-intro .btn {
+  border-radius: 0;
+  text-transform: uppercase;  
+}
+
+#home-info {
+  margin-top: 15%;
+  margin-bottom: 15%;
+} 
+
+/* --------------------------------------------About page  */
+.about-left-bg {
+  height: 100vh;
+  background: url(../images/about-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: 0 40%;
+  position: fixed;
+}
+
+#about-image-header {
+  position: relative;
+  margin: 10% 0;
+  margin-bottom: 2%;
+}
+
+#about-image-header::before {
+  content: url(../ornament/ornament5.png);
+  transform: scale(0.9);
+  display: block;
+  position: absolute;
+  bottom: 80%;
+  left: 35%;
+}
+
+#about-info {
+  font-family: "Quicksand";
+  margin-top: 7%;
+  margin-bottom: 7%;
+}
+
+
+
 
 @media only screen and (max-width:401px) {
 

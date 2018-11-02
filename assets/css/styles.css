@@ -47,22 +47,21 @@ div#landing-body {
   height: 100vh;
 }
 
-#navbar {
+#navbar { /* Universal Navbar */
   height: 6%;
   padding-top: 3%;
   padding-right: 15%;
 }
 
-.navbar-nav {
+.navbar-nav { /* Universal */
   margin-right: 1%;
-  /* background: yellow; */
 }
 
-.navbar-nav li{
+.navbar-nav li{ /* Universal */
   margin-right: 10%;
 }
 
-.navbar-nav li a {
+.navbar-nav li a { /* Universal */
   color: #F6F6F6;
 }
 
@@ -103,6 +102,7 @@ div#landing-body {
   position: relative;
   transition-duration: 0.3s;
 }
+
 
 /* --------------------------------------------------------Home Page */
 
@@ -156,7 +156,8 @@ div#landing-body {
 }
 
 .home-right-bg {
-  background-color: #FEFEFE;
+  background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+ background-blend-mode: screen;
   text-align: center;
   color: #4F4F4F;
   font-family: "Quicksand";
@@ -193,6 +194,7 @@ div#landing-body {
 .home-intro .btn {
   border-radius: 0;
   text-transform: uppercase;  
+  -webkit-border: 1px solid #292929;
 }
 
 #home-info {
@@ -201,6 +203,12 @@ div#landing-body {
 } 
 
 /* --------------------------------------------About page  */
+
+#about-logo {
+  position: absolute;
+  top: .5%;
+ }
+
 .about-left-bg {
   height: 100vh;
   background: url(../images/about-bg.jpg) no-repeat;
@@ -215,6 +223,11 @@ div#landing-body {
   margin-bottom: 2%;
 }
 
+#about-image-header img:hover {
+  opacity: 0.7;
+  transition: 0.4s;
+}
+
 #about-image-header::before {
   content: url(../ornament/ornament5.png);
   transform: scale(0.9);
@@ -224,18 +237,143 @@ div#landing-body {
   left: 35%;
 }
 
+.about-right-bg {
+  background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+ background-blend-mode: screen;
+}
+
 #about-info {
   font-family: "Quicksand";
   margin-top: 7%;
   margin-bottom: 7%;
 }
 
+#about-team {
+  font-family: "Quicksand";
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.team-members {
+  position: relative;
+}
+
+#markus::before {
+  content: url('../images/markus.png');
+  position: absolute;
+  display: block;
+  left: -35%;
+  bottom: 60%;
+}
+
+#ella::before {
+  content: url('../images/ella.png');
+  position: absolute;
+  display: block;
+  left: -35%;
+  bottom: 40%;
+}
+
+#nathan::before {
+  content: url('../images/nathan.png');
+  position: absolute;
+  display: block;
+  left: -35%;
+  bottom: 50%;
+}
+
+#mike::before {
+  content: url('../images/mike.png');
+  position: absolute;
+  display: block;
+  left: -35%;
+  bottom: 40%;
+}
+
+.team-btn {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background: transparent;
+  border: 1px solid #000;
+}
+
+#main-team {
+  margin-bottom: 15%;
+  font-family: "Quicksand";
+}
+
+
+/* --------------------------------------------------------------Contact Page */
+
+#contact-body-bg {
+  background: url(../images/contact.jpg) no-repeat;
+  background-size: cover;
+  background-position: -90% 80%;
+  height: 100vh;
+  position: fixed;
+  transition: 2s;
+}
+
+#contact-body-bg:hover::after {
+  content: 'Hello there!';
+  color: #292929;
+  display: block;
+  position: absolute;
+  transform: translate(-50% -50%);
+  top: 50%;
+  left: 25%;
+  transition-duration: 2s;
+  opacity: 1;
+  width: 50%;
+  text-align: center;
+  background-color: rgba(241, 241, 241,0.5);
+}
+
+#contact-left {
+  background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+ background-blend-mode: screen;
+}
+
+#contact-logo {
+  position: absolute;
+  top: 2%;
+
+ }
+
+
+ .contact-header {
+   margin-top: 10%;
+   margin-bottom: 5%;
+   font-family: "Quicksand";
+ }
+
+ .contact-header h4 {
+   font-weight: 700;
+ }
+
+ .submit-btn {
+   margin: 5% 0;
+   padding: 2% 10%;
+   margin-left: 70%;
+ }
+
+ #contact-footer {
+  background-color: rgba(224, 224, 224,0.4);
+  /* display: none; */
+  
+}
 
 
 
+/* ------------------------------------------------------------------- Mobile Styles */
 @media only screen and (max-width:401px) {
 
   /* -------------------------------------------------------------Landing (M) */
+
+  div#landing-body {
+    overflow-y: hidden;
+  }
+
   div#landing-body {
     height: 1000px;
     background: url('../images/wedding1.jpg') no-repeat;
@@ -252,34 +390,329 @@ div#landing-body {
 
   /* ----------------------------------------------------------------Home (M) */
 
-  #home-body-bg {
-    background: url('../images/home1.jpg') no-repeat;
-    background-size: contain;
-    height: 100vh;
-  }
+html, .container-fluid {
+  overflow-x: hidden; 
+}
 
-  #home-images {
-    display: none;
-  }
+#navbar {
+  font-size: 1em;
+}
 
   #home-logo {
     content: url('../logo/logo3.png');
     width: 60%;
-    left: 25%;
+    left: 23%;
+  }
+
+  .home-left-bg {
+    position: static;
+    padding: 0;
+    margin-right: 0;
+    background-position-x: 40%;
+    height: 50vh;
   }
 
   .home-intro {
+    /* position: relative; */
+    /* top: 60%; */
+    /* background-color: rgba( 46, 46, 46, 0.6); */
+    color: #000;
+    /* padding: 5% 3%; */
+    /* margin-bottom: 4%; */
+  }
+
+  .home-intro > h1::before {
+    bottom: 50%;
+    left: -4%;
+  }
+
+  #home-footer {
+    position: static;
+    bottom: 0;
+    left: 0;
+    margin-top: 35%;
+    margin-bottom: 0;
+    /* height: 60px; */
+  }
+
+  .footer-nav {
     position: relative;
-    top: 60%;
-    background-color: rgba( 46, 46, 46, 0.6);
-    color: #f2f2f2;
-    padding: 5% 3%;
-    margin-bottom: 4%;
+    left: -80%;
+    float: left;
+    width: 300px;
   }
 
-  .footer-right {
-    padding-bottom: 0;
-    margin-top: 8%;
+  .footer-nav li {
+    margin-right: 8%;
+    float: left;
   }
 
+/* -------------------------------------------------About (M) */
+
+html, .container-fluid {
+  overflow-x: hidden;
+}
+
+.about-left-bg {
+  position: static;
+  height: 50vh;
+}
+
+.about-right-bg {
+  text-align: center;
+}
+
+
+#about-image-header {
+  margin-top: 20%;
+  margin-left: 5%;
+}
+
+#about-image-header::before {
+  transform: scale(0.5);
+  bottom: 40%;
+  left: 15%;
+}
+
+#about-team {
+  margin-top: 10%;
+  margin-bottom: 45%;
+}
+
+.team-members {
+  margin-bottom: 45%;
+}
+
+#ella::before, #nathan::before, #mike::before, #markus::before {
+  bottom: 105%;
+  left: 35%;
+}
+
+}
+/* -------------------------------------------------------Contact Page (M) */
+
+html, .container-fluid {
+  overflow-x: hidden;
+}
+
+#contact-body-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50vh;
+}
+
+#contact-left {
+  margin-top: 50vh;
+}
+
+.contact-toggler-icon { /* Universal */
+  position: relative;
+  left: 20%;
+  text-align: left;
+} 
+
+#contact-toggle {
+  margin-left: 995%;
+}
+
+#contact-logo {
+  margin-left: 0%;
+}
+
+.submit-btn {
+  margin-left: 63%;
+}
+
+
+/* --------------------------------------------------Tablet Styles  */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+/* Home Page */
+
+.home-navbar {
+  text-align: right;
+  padding-right: 25%;
+}
+
+#home-nav {
+  margin-right: 25%;
+  padding-right: 25%;
+}
+
+.home-left-bg {
+  position: static;
+  padding: 0;
+  margin-right: 0;
+  background-position-x: 40%;
+  height: 70vh;
+  background-attachment: fixed;
+}
+
+
+#home-logo {
+  content: url('../logo/logo3.png');
+  width: 60%;
+  left: 36%;
+  top: 2%;
+}
+
+.home-intro > h1::before {
+  bottom: 50%;
+  left: 10%;
+}
+
+/* -------------------------About Page */
+.about-left-bg {
+  position: static;
+  height: 50vh;
+  background-attachment: fixed;
+  background-position-y: 200%;
+}
+
+#about-info {
+  margin-top: 10%;
+}
+
+#navbar {
+  font-size:1em;
+}
+
+.nav-link {
+  margin-left: 15%;
+}
+
+.first-link {
+  margin-top: 10%;
+} 
+
+/* ------------------------------------Contact Page */
+
+#contact-body-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60vh;
+  background-position-y: 70%;
+}
+
+#contact-logo{
+  margin-left: 8%;
+}
+
+#contact-left {
+  margin-top: 60vh;
+}
+
+.contact-nav {
+  text-align: center;
+  margin-left: 70%;
+  padding: 0;
+}
+
+#contact-nav {
+  color: #292929;
+}
+
+
+.contact-toggler {
+  margin-left: 75%;
+} 
+
+.contact-toggler-icon {
+  position: relative;
+  left: 20%;
+  text-align: right;
+} 
+
+
+
+}
+
+
+/* ---------------------------------------------------------Desktop Styles */
+
+@media only screen and (min-width:961px) {
+
+  /* ------------------------------------------------------------------Home */
+
+  #navbar {
+    font-size: 0.9em;
+  }
+
+  .home-left-bg {
+  height: 100vh;
+  background: url(../images/home-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: 0 40%;
+  position: fixed;
+  border-right: 2px solid #fff;
+}
+
+  #home-logo {
+    left: 0;
+    top: 2%;
+  }
+
+ .home-intro > h1::before {
+  content: url(../ornament/eye.png);
+  display: block;
+  position: absolute;
+  bottom: 25%;
+  left: 5%;
+  transform: scale(0.3)
+}
+
+/* ---------------------------------------------------------Contact */
+
+  #contact-body-bg {
+    background: url(../images/contact.jpg) no-repeat;
+    background-size: cover;
+    background-position: -90% 80%;
+    height: 100vh;
+    position: fixed;
+  }
+
+  #contact-left {
+    margin-top: 0;
+  }
+
+  #contact-nav {
+    color: #292929;
+  }
+
+  .contact-nav {
+    margin-left: 45%;
+    margin-top: 3%;
+  }
+
+  .contact-toggler {
+    margin-left: 0%;
+  }
+
+  .contact-toggler-icon {
+    position: static;
+    /* text-align: right; */
+  }
+
+  #contact-logo {
+    margin-left: 8%;
+  }
+
+/* ----------------------------------------------------------About */
+
+  .about-left-bg {
+    height: 100vh;
+    background: url(../images/about-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: 0 40%;
+    position: fixed;
+  }
+
+  .first-link {
+    margin-top: 0%;
+  } 
+
+  .about-navbar ul li:first-of-type {
+    margin-left: 170%;
+  }
 }

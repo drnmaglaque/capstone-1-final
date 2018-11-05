@@ -200,7 +200,15 @@ div#landing-body {
 #home-info {
   margin-top: 15%;
   margin-bottom: 15%;
-} 
+}
+
+#home-info h4 {
+  margin-top: 15%;
+}
+
+#home-info button {
+  margin-bottom: 15%;
+}
 
 /* --------------------------------------------About page  */
 
@@ -349,12 +357,9 @@ div#landing-body {
 
  .contact-header h4 {
    font-weight: 700;
- }
-
- .submit-btn {
-   margin: 5% 0;
-   padding: 2% 10%;
-   margin-left: 70%;
+   background-color: #292929;
+   color: #F9f9f9;
+   padding: 2%;
  }
 
  #contact-footer {
@@ -363,6 +368,73 @@ div#landing-body {
   
 }
 
+/* ---------------------------------------------------Gallery Page  */
+
+#left-1 {
+  background-color: black;
+  height: 100vh;
+  display: inline-block;
+  float: left;
+  padding: 0;
+}
+
+#left-1 img {
+  width: 100%;
+  height: 100%;
+}
+ 
+#mid-1 {
+  background-color: black;
+  height: 100vh;
+  display: inline-block;
+  float: left;
+  padding: 0;
+}
+
+#mid-1 img {
+  width: 100%;
+  height: 100%;
+}
+
+#right-1 {
+  background-color: black;
+  height: 100vh;
+  display: inline-block;
+  float: left;
+  padding: 0;
+}
+
+#right-1 img {
+  width: 100%;
+  height: 100%;
+}
+
+#mid-2 {
+  float: left;
+  padding: 0;
+}
+
+#mid-3 {
+  float: left;
+  padding: 0;
+}
+
+#gallery-menu {
+  background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+ background-blend-mode: screen;
+ display: flex;
+ justify-content: center;
+}
+
+#gallery-menu ul {
+  list-style: none;
+}
+
+#gallery-menu ul li {
+  display: inline;
+ 
+
+}
 
 
 /* ------------------------------------------------------------------- Mobile Styles */
@@ -375,17 +447,31 @@ div#landing-body {
   }
 
   div#landing-body {
-    height: 1000px;
+    height: 100vh;
     background: url('../images/wedding1.jpg') no-repeat;
-    background-position: 6% -390%;
+  
   }
 
   .left {
     margin-top: 12%;
   }
 
+  .left p {
+    font-family: "Quicksand";
+  }
+
+  .left p, 
+  .left a button {
+    color: #292929;
+  }
+
+  .left a button {
+    border: 1px solid #292929;
+  }
+
   .left img {
     width: 60%;
+    background-color: #292929;
   }
 
   /* ----------------------------------------------------------------Home (M) */
@@ -402,6 +488,7 @@ html, .container-fluid {
     content: url('../logo/logo3.png');
     width: 60%;
     left: 23%;
+    
   }
 
   .home-left-bg {
@@ -488,7 +575,7 @@ html, .container-fluid {
   left: 35%;
 }
 
-}
+
 /* -------------------------------------------------------Contact Page (M) */
 
 html, .container-fluid {
@@ -521,12 +608,96 @@ html, .container-fluid {
 }
 
 .submit-btn {
-  margin-left: 63%;
+  margin-left: 0%;
 }
 
 
+
+/* ----------------------------------------------------------Gallery (M) */
+
+
+#mid-1, #right-1 {
+  height: 70vh;
+}
+
+#blackbox-photoshoot {
+  font-size: 0.9em;
+}
+
+.blackbox {
+  height: 100px;
+  width: 100px;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  position: absolute;
+  z-index: 999;
+  top: 5%;
+  left: 45%;
+  padding: 10%;
+  padding-right: 18%;
+  font-size: 0.6em;
+  text-align: right;
+  mix-blend-mode: multiply;
+}
+
+#blackbox-photoshoot {
+  font-size: 0.6em;
+  padding-right: 24%;
+  height: 100px;
+  width: 100px;
+}
+
+#blackbox-parties,
+#blackbox-bd,
+#blackbox-debut,
+#blackbox-wed {
+  background: white;
+  color: black;
+  mix-blend-mode: screen;
+}
+
+
+}
+
 /* --------------------------------------------------Tablet Styles  */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
+
+/* Landing Page  */
+
+.container-fluid {
+  overflow: hidden;
+}
+
+div#landing-body {
+  background-color: darkblue;
+  background: url('../images/landing-md2.jpeg') no-repeat;
+  background-size: cover;
+  height: 100vh;
+  
+}
+
+.left {
+  left: -15%;
+  top: -10%;
+  text-align: center;
+}
+
+.left img {
+  position: relative;
+  left: -50%;
+  background-color: #292929;
+  border-bottom: 1px solid #F9F9F9;
+}
+
+.left p,
+.left a button {
+  color: #292929;
+}
+.left a button {
+  border: 1px solid #292929;
+}
+
 /* Home Page */
 
 .home-navbar {
@@ -624,6 +795,39 @@ html, .container-fluid {
   text-align: right;
 } 
 
+/* ---------------------------------- Gallery Page (T) */
+
+.blackbox {
+  height: 150px;
+  width: 150px;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  position: absolute;
+  z-index: 999;
+  top: 5%;
+  left: 45%;
+  padding: 10%;
+  padding-right: 18%;
+  font-size: 1.3em;
+  text-align: right;
+  mix-blend-mode: multiply;
+}
+
+#blackbox-photoshoot {
+  font-size: 1em;
+  padding-right: 24%;
+}
+
+#blackbox-parties,
+#blackbox-bd,
+#blackbox-debut,
+#blackbox-wed {
+  background: white;
+  color: black;
+  mix-blend-mode: screen;
+}
+
 
 
 }
@@ -648,9 +852,10 @@ html, .container-fluid {
   border-right: 2px solid #fff;
 }
 
+
   #home-logo {
     left: 0;
-    top: 2%;
+    top: 0.5%;
   }
 
  .home-intro > h1::before {
@@ -658,7 +863,7 @@ html, .container-fluid {
   display: block;
   position: absolute;
   bottom: 25%;
-  left: 5%;
+  left: 25%;
   transform: scale(0.3)
 }
 
@@ -674,6 +879,7 @@ html, .container-fluid {
 
   #contact-left {
     margin-top: 0;
+    height: 100vh;
   }
 
   #contact-nav {
@@ -698,6 +904,24 @@ html, .container-fluid {
     margin-left: 8%;
   }
 
+  .submit-btn {
+    margin: 10% 0;
+    padding: 2% 10%;
+    margin-left: 5%;
+    background: transparent;
+    border: 1px solid #000;
+  }
+
+
+  .submit-btn:first-of-type{
+    margin-left: 0;
+  }
+
+  #contact-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 /* ----------------------------------------------------------About */
 
   .about-left-bg {
@@ -713,6 +937,103 @@ html, .container-fluid {
   } 
 
   .about-navbar ul li:first-of-type {
-    margin-left: 170%;
+    margin-left: 270%;
   }
+
+
+
+/* ---------------------------------------------------Gallery Page  */
+ 
+#mid-1, #mid-2 {
+  background-color: black;
+  height: 100vh;
+
+  float: left;
+  padding: 0;
+}
+
+#mid-1 img,
+#mid-2 img {
+  width: 100%;
+  height: 100%;
+}
+
+#right-1, #right-2 {
+  background-color: black;
+  height: 100vh;
+  float: left;
+  padding: 0;
+}
+
+#right-1 img,
+#right-2 img {
+  width: 100%;
+  height: 100%;
+}
+
+#mid-3 {
+  float: left;
+  padding: 0;
+}
+
+#mid-4 {
+  float: left;
+  padding: 0;
+}
+
+#gallery-menu {
+  background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+ background-blend-mode: screen;
+ display: flex;
+ justify-content: center;
+}
+
+#gallery-menu ul {
+  list-style: none;
+}
+
+#gallery-menu ul li {
+  display: inline;
+ 
+
+}
+
+.blackbox {
+  height: 150px;
+  width: 150px;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  position: absolute;
+  z-index: 999;
+  top: 5%;
+  left: 45%;
+  padding: 10%;
+  padding-right: 18%;
+  font-size: 1.3em;
+  text-align: right;
+  mix-blend-mode: multiply;
+}
+
+#blackbox-photoshoot {
+  font-size: 1em;
+  padding-right: 24%;
+}
+
+#blackbox-parties,
+#blackbox-bd,
+#blackbox-debut,
+#blackbox-wed {
+  background: white;
+  color: black;
+  mix-blend-mode: screen;
+}
+
+/* @media only screen and (min-width:1200px) {
+  .home-intro > h1:before {
+    left: 20%;
+  }
+}  */
+
+
 }
